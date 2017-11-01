@@ -114,8 +114,8 @@ public class TeleOp extends OpMode {
         //rightFront.setPower(right);
         //rightBack.setPower(right);
 
-        drive.mechDrive(controls.leftY(), controls.leftX(), controls.rightX());
-       // drive.mechDrive(gamepad1.left_stick_y, gamepad1.left_stick_y, gamepad1.right_stick_x);
+        //drive.mechDrive(controls.leftY(), controls.leftX(), controls.rightX());
+        drive.mechDrive(gamepad1.left_stick_y, gamepad1.left_stick_x, gamepad1.right_stick_y);
     }
 
     /*
