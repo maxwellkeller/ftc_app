@@ -85,7 +85,6 @@ public class TeleOp extends OpMode {
         leftBack = hardwareMap.dcMotor.get("lbm");
         rightFront = hardwareMap.dcMotor.get("rfm");
         rightBack = hardwareMap.dcMotor.get("rbm");
-;
     }
 
 
@@ -115,7 +114,8 @@ public class TeleOp extends OpMode {
         //rightBack.setPower(right);
 
         //drive.mechDrive(controls.leftY(), controls.leftX(), controls.rightX());
-        drive.mechDrive(gamepad1.left_stick_y, gamepad1.left_stick_x, gamepad1.right_stick_y);
+        drive.mechDrive(gamepad1.right_stick_x, gamepad1.left_stick_x, -gamepad1.right_stick_y);
+        telemetry.addData("stick",gamepad1.left_stick_x);
     }
 
     /*
